@@ -44,7 +44,7 @@ article h1{
  
 }
 article p{
-    padding-left: 5%;
+    padding-left: 2%;
 }
 article img{
     width:80%;
@@ -56,6 +56,7 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5%;
 }
 aside h4{
     margin-bottom: 8%;
@@ -77,11 +78,70 @@ aside h4{
 padding-left: 5%;
 padding-right: 5%;
 }
+footer{
+    display: flex;
+    justify-content: flex-end;
+    
+}
 footer img{
     width: 20%;
-    float: right;
+   
 }
 /* screen taplett */
 @media screen and  (min-width:960px){
+
+    header{
+        margin-bottom: 5%;
+    height: 80px;
+}
+header img{
+    width: 10%;
+    height:50px; 
+}
+main{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+article{
+    width: 50%;
+    order: 1;
+   margin-bottom: 5%;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+margin-left: 5%;
+    width: 40%;
+    order: 2;
+    margin-top: 5%;
+}
+aside h4{
+    margin-bottom: 8%;
+    text-decoration:underline;
+   
+}
+.aureArticle a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;}
+   
+footer {
+    order:3;
+  
+}
+}
+@media screen and  (min-width:960px){
+ 
+header img{
+    width:5%;
+    height:50px; 
+    margin-top: 1%;
+}
+article{
+    margin-bottom: 5%;
+}
 
 }
