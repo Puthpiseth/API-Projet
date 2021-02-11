@@ -21,9 +21,9 @@
 
         <form id="login" class="input-group">
             <label class="label" for="username">Username</label>
-            <input class="input-field" type="text" placeholder="Enter your username" name="username" required>
+            <input class="input-field" type="email" placeholder="Enter your username" name="username" required>
             <label class="label" for="password" >Password</label>
-            <input class="input-field" type="password" placeholder="Enter your password" id="psw" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            <input class="input-field" type="password" placeholder="Enter your password" id="psw" name="password" minlength="8" required=>
             <div class="check-box">
             <input type="checkbox"><span>Remember Password</span>
             </div>
