@@ -9,6 +9,11 @@
  body{
      background-color: black;
      color: white;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+ }
+ p{
+     font-weight: bold;
+     font-size: 20px;
  }
 
 
@@ -114,7 +119,7 @@ header{
         margin-bottom: 15%;
     }
 .text p{
-    padding-top:50%;
+    padding-top:40%;
 }
 .text a{
     padding-top: 5%;
@@ -129,8 +134,6 @@ border: none;
 color: white;
 cursor: pointer;
 }
-
-
 
 #article{
     
@@ -156,8 +159,7 @@ cursor: pointer;
 
 footer{
     display: flex;
-    position: relative;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     font-size: 0.8rem;
@@ -172,27 +174,29 @@ footer>hr{
    
   footer>p{
       margin-top: 10%;
-      font-size: 0.6rem;
+      font-size: 12px;
      
   }  
   footer>img{
-    position: absolute;
+ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  
   }
     
 
-
+.slider{
+    display: none;
+}
 
 
 @media screen and (min-width:700px){
    
   
     #accueil{
-      height: 450px;
-      margin-top: 12%;
-      margin-bottom: 10%;
+      height: 400px;
+      margin-top:5%;
   }
   
   .PremArticles {
@@ -202,6 +206,7 @@ footer>hr{
 
  
 #article3{
+    display: block;
     margin-bottom: 10%;
     width: 90%;
     margin-left: 4%;
@@ -224,10 +229,23 @@ footer>hr{
   .menu>a{
     font-size: 24px;
 }
-footer>p{
-    margin-top: 5%;
-    font-size: 0.6rem;
+
+footer{
+    font-size: 15px;
+    height: 11rem;
 }
+
+
+footer>hr{
+    width: 100%;
+}
+
+   
+  footer>p{
+      margin-top: 10%;
+      font-size: 15px;
+     
+  }  
 
 }
 @media screen and (min-width:960px){
@@ -248,13 +266,89 @@ footer>p{
         padding-top:40%;
     }
     #article3{
-        margin-top: 5%;
-        width: 80%;
-        margin-left: 10%;
+    display: none;
     }
     footer>p{
         margin-top: 2%;
         font-size: 0.6rem;
+    }
+    .slider{
+        display: block;
+    }
+    /* slide show disktop */
+    #slide-show{
+        /* background:url("escalier\ 1.jpg") no-repeat center/cover; */
+    
+        height: 500px;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    
+    
+    }
+    
+    
+    #slide-show{
+        color: white;
+    }
+    
+    #slide-show>div>.slider>.slides>.slide>img{
+      height: 400px;
+      width: 870px;
+      object-fit: cover; 
+    
+    
+    }
+    .slide{
+      float: left;
+      position: relative;
+      
+    }
+    .slide p{
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%,-50%);
+    }
+    .slide a{
+        padding-left: 40%;
+    }
+  
+    .slides{
+      width: calc(870px * 4);
+      height: 400px;
+      animation: glisse 40s infinite;
+    
+    }
+    .slider{
+      width: 870px;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    @keyframes glisse{
+      0% {
+        transform: translateX(0);
+      }
+      10% {
+        transform: translateX(0);
+      }
+    
+      33%{
+        transform: translateX(-870px);
+      }
+      66%{
+        transform: translateX(-1740px);
+      }
+      99%{
+        transform: translate(-2610px);
+      }
+      100%{
+        transform: translateX(0);
+      }
     }
     
 }
