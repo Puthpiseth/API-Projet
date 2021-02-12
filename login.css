@@ -13,7 +13,7 @@ html {
 h1 {
    position: absolute;
    margin-top: -200px;
-   margin-left: 400px;
+   margin-left: 370px;
    font-size: 4rem;
    letter-spacing: 5px;
    color: white;
@@ -90,6 +90,18 @@ h1 {
     margin-top: 15px;
 }
 
+/* Message-Error pour username et mot de passe */
+
+.usernameError, .passwordError {
+    margin-top: 10px;
+    width: 280px;
+    background: #ffad06;
+    padding: 10px;
+    color:#ff105f;
+    border-radius: 2px;
+    display: none;
+}
+
 .check-box {
     display: flex;
     margin: 20px 15px 20px 0;
@@ -99,14 +111,14 @@ span {
     margin-left: 5px;
 }
 
-.submit-btn {
+button.submit-btn {
     display: block;
     background: linear-gradient(to right, #ff105f, #ffad06);
     width: 80%;
     padding: 12px 30px;
     color: white;
     font-size: 14px;
-    margin: auto;
+    margin: 30px 35px;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -114,7 +126,7 @@ span {
 }
 
 p {
-    margin: 50px 70px;
+    margin: 25px 73px;
 }
 
 p > a {
@@ -133,18 +145,25 @@ p > a:hover {
     left: 450px;
 }
 
-/* Ecran desktop et tablette */
+/* Ecran desktop */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+
+    html {
+        
+        background-position: center;
+        background-size: cover;
+        height: 1700px;
+    }
 
     .form-box {
-       margin-top: 400px;
+       margin: 40% auto;
     
     }    
 
     h1 {
         font-size: 3rem;
-        margin-left: 100px;
+        margin-left: 290px;
         margin-top: -130px;
      }
 
@@ -159,106 +178,60 @@ p > a:hover {
      button.submit-btn {
         padding: 13px 30px;
         font-size: 15px;
-        width: 85%;
-        margin-left: 35px;
+        width: 82%;
+        margin: 30px 35px;
     }
 
+    p {
+        margin: 40px 72px;
+    }
 
 }
 
-/* Ecran petite tablette */
+/* Ecran ipad pro */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     
-    h1 {
-        margin-top: -120px;
-        margin-left: 70px;
-        font-size: 2.2rem;
+    h1{
+        margin-left: 100px;
+        font-size: 3rem;
     }
     
     .form-box {
         position: relative;
-        margin-top: 250px;
+        margin: 50% auto;
         width: 400px;
         height: 540px;
         overflow: hidden;
     } 
     
-    .input-group {
-        top: 100px;
-        width: 75%;
-    }
-
-    input.input-field {
-        font-size: 18px;
-    }
-
-    .label {
-        margin-bottom: 5px;
-        margin-top: 15px;
-        font-size: 20px;
-    }
-
-    .check-box {
-        font-size: 18px;
-        margin: 20px 0 20px 0;
-    }
-
-    span {
-        margin-right: 2px;
-    }
-
-    .button-box {
-        width: 260px;
-        margin: 25px 75px;
-    }
-
-    button.toggle-btn {
-        font-size: 18px;
-    }
-
-    #btn {
-        width: 150px;
-    }
-
-    button.submit-btn {
-        padding: 13px 25px;
-        font-size: 18px;
-    }
-    
 }
 
-/* Ecran grand smartphone */
+/* Ecran ipad */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     
     html {
         background-position: center;
         background-size: cover;
-        height: 800px;
+        height: 1000px;
     }
 
     .form-box {
         width: 300px;
         height: 410px;
-        margin: 50% auto;
+        margin: 35% auto;
     }   
 
-    h1 > span {
-        font-size: 23px;        
-    }
 
-    h1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 18%;
-
+    h1{
+        margin-right: 80px;
+        font-size: 2rem;
     }
     
     .input-group {
         top: 75px;
-        width: 210px;
+        width: 220px;
     }
 
     input.input-field {
@@ -298,16 +271,11 @@ p > a:hover {
         width: 90%;
         font-size: 12px;
         padding: 10px 25px;
-        margin-left: 18px;
+        margin: 5px 10px;
     }
 
-    h1 {
-    font-size: 1.2rem;
-        margin-top: -70px;
-     }
-
     p {
-        margin: 50px 30px;
+        margin: 60px 50px;
         font-size: 14px;
     }
 
@@ -315,36 +283,38 @@ p > a:hover {
 
 /* Ecran mini smartphone */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
     
     html {
         background-position: center;
         background-size: cover;
-        height: 600px;
+        height: 1000px;
     }
 
     .form-box {
-        width: 270px;
-        height: 390px;
-        margin: 40% auto;
+        margin: 60% auto;
     }   
 
     h1 {
-        margin-left: 10%;
+        font-size: 2rem;
     }
 
     .input-group {
-        top: 60px;
+        top: 80px;
     }
 
     input.input-field {
         font-size: 11px;
-        width: 95%;
+        width: 90%;
     }
 
     .button-box {
         width: 200px;
-        margin-left: 50px;
+        margin-left: 40px;
+    }
+
+    #btn {
+        width: 105px;
     }
 
     .label {
@@ -358,8 +328,33 @@ p > a:hover {
 
     button.submit-btn {
         font-size: 12px;
-        margin-left: 5px;
-        width: 95%;
+        margin-left: 1px;
+        width: 85%;
     }
 
+    p {
+        margin: 50px 40px;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    h1 {
+        font-size: 1.8rem;
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .form-box {
+        margin: 80% auto;
+    }   
+
+    h1 {
+        font-size: 1.7rem;
+        margin-left: 50px;
+    }
 }
