@@ -72,13 +72,16 @@ header{
     text-decoration: none;
     color: white;
     font-size: 12px;
- 
     display: flex;
     align-items: center;
     justify-content: space-around;
 
 }
 
+.menu>a:hover{
+    color: #ffad06;
+
+}
 #mainNav{
     background-color: #A20A0A;
     width: 100%;
@@ -182,8 +185,10 @@ footer>hr{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    background: red;
   
   }
+
     
 
 .slider{

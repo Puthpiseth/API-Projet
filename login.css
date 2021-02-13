@@ -32,7 +32,25 @@ h1 {
     padding-top: 5px;
     border-radius: 10px;
     overflow: hidden;
-}    
+} 
+
+.AlartBox{
+    position: absolute;
+    top:34%;
+    /* justify-items: center; */
+    text-align: center;
+    /* changer width: 80% */
+    width:75%; 
+    height: 30px;
+    background-color: rgba(255, 255, 0, 0.226);
+    margin-left: 12%;
+    margin-bottom: 50%;
+    /* ajouter padding */
+    padding-top: 5px;
+    color: black;
+    transition: all 1s;
+    color: red;
+}
 
 .button-box {
     width: 230px;
@@ -64,6 +82,11 @@ h1 {
     font-size: 14px;
 }
 
+.toggle-btn:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  
+}
 
 .input-group {
     display: flex;
@@ -90,18 +113,6 @@ h1 {
     margin-top: 15px;
 }
 
-/* Message-Error pour username et mot de passe */
-
-.usernameError, .passwordError {
-    margin-top: 10px;
-    width: 280px;
-    background: #ffad06;
-    padding: 10px;
-    color:#ff105f;
-    border-radius: 2px;
-    display: none;
-}
-
 .check-box {
     display: flex;
     margin: 20px 15px 20px 0;
@@ -118,11 +129,16 @@ button.submit-btn {
     padding: 12px 30px;
     color: white;
     font-size: 14px;
-    margin: 30px 35px;
+    margin: 8px 35px;
     border: 0;
     outline: none;
     border-radius: 30px;
     cursor: pointer;
+}
+
+button.submit-btn:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 p {
@@ -179,7 +195,7 @@ p > a:hover {
         padding: 13px 30px;
         font-size: 15px;
         width: 82%;
-        margin: 30px 35px;
+        margin: 5px 35px;
     }
 
     p {
@@ -214,7 +230,7 @@ p > a:hover {
     html {
         background-position: center;
         background-size: cover;
-        height: 1000px;
+        height: 1100px;
     }
 
     .form-box {
@@ -225,8 +241,8 @@ p > a:hover {
 
 
     h1{
-        margin-right: 80px;
-        font-size: 2rem;
+        margin-right: 60px;
+        font-size: 1.9rem;
     }
     
     .input-group {
@@ -281,8 +297,7 @@ p > a:hover {
 
 }
 
-/* Ecran mini smartphone */
-
+/* Ecran smartphone */
 @media screen and (max-width: 425px) {
     
     html {
@@ -296,7 +311,9 @@ p > a:hover {
     }   
 
     h1 {
-        font-size: 2rem;
+        margin-top: -100px;
+        margin-left: 75px;
+        font-size: 1.5rem;
     }
 
     .input-group {
@@ -339,22 +356,40 @@ p > a:hover {
 
 }
 
+
+/* Ecran mini smartphone */
+
 @media screen and (max-width: 375px) {
 
     h1 {
-        font-size: 1.8rem;
-        margin-left: 80px;
+        font-size: 1.5rem;
+        margin-left: 60px;
     }
-}
-
-@media screen and (max-width: 320px) {
 
     .form-box {
         margin: 80% auto;
-    }   
+    }  
+}
+
+@media screen and (max-width: 325px) {
+
+    .form-box {
+        width: 280px;
+        height: 410px;
+        margin: 80% auto;
+    } 
 
     h1 {
-        font-size: 1.7rem;
-        margin-left: 50px;
+        font-size: 1.05rem;
+        margin-left: 60px;
+        margin-top: -80px;
+    }
+
+    #btn {
+        width: 90px;
+    }
+
+    input.input-field {
+        width: 85%;
     }
 }
