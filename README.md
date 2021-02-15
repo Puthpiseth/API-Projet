@@ -1,6 +1,6 @@
 ## API-SimplonNews-Project
 
-This is a team project of Simplon.co BootCamp. It was developed with Thrid-Party-API (https://simplonews.brianboudrioux.fr/). This app is responsive and adaptable to all types of screen devices from desktop to mini smartphone.
+This is a team project of Simplon.co BootCamp. It was developed with Web-API (https://simplonews.brianboudrioux.fr/). This app is responsive and adaptable to all types of screen devices from desktop to mini smartphone.
 
 ### Project Link
 
