@@ -20,4 +20,8 @@ This is a team project of Simplon.co BootCamp. It was developed with Web-API (ht
 - Desktop Layout
 ![](DesktopLayout.png)
 
+- Ipad Layout
+![](IpadLayout.png)
+
 - Mobile Layout
+![](MobileLayout.png)
