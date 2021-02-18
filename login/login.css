@@ -37,15 +37,12 @@ h1 {
 .AlartBox{
     position: absolute;
     top:34%;
-    /* justify-items: center; */
     text-align: center;
-    /* changer width: 80% */
     width:71.5%; 
     height: 30px;
     background-color: rgba(255, 255, 0, 0.226);
     margin-left: 12%;
     margin-bottom: 50%;
-    /* ajouter padding */
     padding-top: 5px;
     color: black;
     transition: all 1s;

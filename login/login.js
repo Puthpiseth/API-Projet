@@ -34,7 +34,7 @@ AlertBox.style.display="none"
 // Mettre en place la connexion via une requête à la API
 
  buttonSignIn.addEventListener("click", function (e){// Cliquer sur le button SignIn...
-    e.preventDefault(); // Bloquer la gestion des clics par défaut
+    // e.preventDefault(); // Bloquer la gestion des clics par défaut
     
     // Cibler les champs du formulaire et stocker les valeurs d'email et de password
     
@@ -46,31 +46,34 @@ AlertBox.style.display="none"
         method:"POST",
         headers:{
             "Content-Type": "application/json"},
-            body:JSON.stringify({email:email,
-                password:password})
+            body:JSON.stringify({"email":email,
+                "password":password})
     }
     fetch ("https://simplonews.brianboudrioux.fr/users/login",fetch_data)//  requit pour récouper tout les data de le utilisateurs dans le simplonnewsAPI
-    .then (function(response){ //Créer une fonction pour vérifier la requête des base de données de l'utilisateur
-        if(response.status==403){
-            alert("server erreur")
-        }
-       
-        // Si l'API retourne le status code http 400 alors : On affiche a l'utilisateur le message d'erreur retourner par l'API
-        // Condition pour afficher une AlartBox si la base des données de l'utilisateur n'existe pas dans le simplonnewsAPI
-        else if(response.status==400) {
-        AlertBox.style.display="block"
-       }else {
-           response.json().then((data) => {//Stocker la base des données de l'utilisateur
-               let userData = data.token
-            localStorage.setItem( "data", userData )
-            AlertBox.style.display="none" // En cas de succès, l'alerteBox ne s'affiche pas
-            window.location.href=("home/home.html") // et redirige vers la page Home
-           })
-           .catch(function (erreur) {
-            AlertBox.style.display="block" // En cas d'erreur, l'alerteBox s'affiche 
-           }) 
+        .then (function(response){ 
+    
+    response.json() 
+    .then(data=>{
+        console.log(data)
+            if(response.status==403){
+            alert("server error")
+        } else if(response.status==400) {
+            AlertBox.style.display="block"
+
+       } else {           
+            let userData = data.token
+            localStorage.setItem("data", userData )
+            AlertBox.style.display="none" 
+            window.location.href=("../home/home.html") 
+           
        } 
+
     })
+
+}) 
+    .catch(function (error) {
+        AlertBox.style.display="block" // En cas d'erreur, l'alerteBox s'affiche 
+    }) 
 })
 
 
