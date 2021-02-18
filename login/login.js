@@ -51,9 +51,8 @@ AlertBox.style.display="none"
     }
     fetch ("https://simplonews.brianboudrioux.fr/users/login",fetch_data)//  requit pour récouper tout les data de le utilisateurs dans le simplonnewsAPI
         .then (function(response){ 
-    
-    response.json() 
-    .then(data=>{
+            response.json() 
+        .then(data=>{
         console.log(data)
             if(response.status==403){
             alert("server error")
