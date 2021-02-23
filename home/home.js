@@ -44,6 +44,7 @@ function getArticles() {
     });
 }
 getArticles();
+
 function generateArticles(data) {
   //   console.log(data.articles);
   let articl1 =document.getElementById("articl1")
@@ -78,8 +79,6 @@ function generateArticles(data) {
     let id8= data.articles[8].id;
     let titre8 = data.articles[8].title;
     let image8 = data.articles[8].img;
-    
-
   
  
     slideShowElem = `<div class="slides">
@@ -90,14 +89,14 @@ function generateArticles(data) {
 </div>`;
 // Articla1
 articlV1=` <p>${titre1}</p>
-<a href="">
+<a href="../Article/Article.html?id=${id1}" >
             <button>lire plus</button>
         </a>`
  articl1.innerHTML=articlV1
  articl1.style.backgroundImage=`url("${image1}")`
  // Articla2
 articlV2=`  <div class="backgrounText"> <p>${titre3}</p></div>
-<a href="">
+<a href="../Article/Article.html?id=${id3}">
             <button>lire plus</button>
         </a>`
  articl2.innerHTML=articlV2
@@ -105,7 +104,7 @@ articlV2=`  <div class="backgrounText"> <p>${titre3}</p></div>
   
 // Article 3
 articlV3=` <p>${titre8}</p>
-<a href="">
+<a href="../Article/Article.html?id=${id8}">
             <button>lire plus</button>
         </a>`
  articl3.innerHTML=articlV3
